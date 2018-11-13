@@ -1,0 +1,58 @@
+type Character {
+  id: ID
+  nickName: String
+  name: String
+  fullName: String
+  story: String
+  createdAt: String
+  updatedAt: String
+}
+
+type CastMember {
+  id: ID
+  name: String
+  characterId: String
+  movieIds: String
+  image: String
+  createdAt: String
+  updatedAt: String
+}
+
+type Movie {
+  id: ID
+  status: String
+  releaseDate: String
+  directors: [String]
+  screenWriters: [String]
+  producers: [String]
+  budget: Float
+  earning: Float
+  length: String
+  story: String
+  castMembersIds: [String]
+  image: String
+  createdAt: String
+  updatedAt: String
+}
+
+input MovieInput {
+  status: String
+  releaseDate: String
+  directors: [String]
+  screenWriters: [String]
+  producers: [String]
+  budget: Float
+  earning: Float
+  length: String
+  story: String
+  castMembersIds: [String]
+  image: String
+}
+
+type Query {
+  getAllMovies(from: Int, count: Int): [Movie]
+}
+
+type Mutation {
+  createMovie(input: MovieInput): Movie
+}

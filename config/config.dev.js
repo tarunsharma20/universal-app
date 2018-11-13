@@ -1,7 +1,7 @@
 const port     = process.env.DEV_APP_PORT  || 3002;
 const hostname = process.env.DEV_HOST_NAME || '127.0.0.1';
 
-const dbHostname = process.env.DEV_DB_HOST_NAME || 'localhost';
+const dbHostname = process.env.DEV_DB_HOST_NAME || '127.0.0.1';
 const dbPort     = process.env.DEV_DB_PORT      || 27017;
 const dbName     = process.env.DEV_DB_NAME      || '';
 

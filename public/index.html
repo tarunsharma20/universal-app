@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form id="form-movie">
+    <p>
+      <label for="movie-status" for="">Status</label>
+      <select id="movie-status">
+        <option value="Released">Released</option>
+        <option value="Upcoming">Upcoming</option>
+        <option value="In development">In development</option>
+      </select>
+    </p>
+    <p>
+        <label for="movie-release-date">Release Date</label>
+        <input id="movie-release-date" type="text" />
+    </p>
+    <p>
+        <label for="movie-director">Directors</label>
+        <input id="movie-director" type="text" />
+    </p>
+    <p>
+        <label for="movie-screen-writer">Screen Writers</label>
+        <input id="movie-screen-writer" type="text" />
+    </p>
+    <p>
+        <label for="movie-producer">Producers</label>
+        <input id="movie-producer" type="text" />
+    </p>
+    <p>
+        <label for="movie-budget">Budget</label>
+        <input id="movie-budget" type="text" />
+    </p>
+    <p>
+      <label for="movie-earning">Earning</label>
+      <input id="movie-earning" type="text" />
+    </p>
+    <p>
+      <label for="movie-length">Length</label>
+      <input id="movie-length" type="text" />
+    </p>
+    <p>
+      <label for="movie-story">Story</label>
+      <textarea id="movie-story"></textarea>
+    </p>
+    <p>
+      <label for="movie-cast-member-id">Cast Members Ids</label>
+      <input id="movie-cast-member-id" type="text" />
+    </p>
+    <p>
+      <label for="movie-image">Image</label>
+      <input id="movie-image" type="file" />
+    </p>
+    <p>
+      <button type="reset">Cancel</button>
+      <button type="submit">Add Movie</button>
+    </p>
+  </form>
+  <div id="movies"></div>
+  <script type="text/javascript" src="/scripts/app.js"></script>
+</body>
+</html>

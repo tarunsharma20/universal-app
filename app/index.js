@@ -3,7 +3,19 @@ const bodyParser = require('body-parser');
 const cors       = require('cors');
 const layout     = require('express-layout');
 const path       = require('path');
+const mongoose   = require('mongoose');
+
+const APIServer  = require('./api');
 const CONFIG     = require('../config');
+
+mongoose.connect(`mongodb://${CONFIG.DB.HOSTNAME}:${CONFIG.DB.PORT}/${CONFIG.DB.NAME}`);
+
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+  console.log("we're connected to DB");
+});
 
 const app = express();
 
@@ -31,7 +43,12 @@ app.set('layouts', path.resolve(__dirname, './views/layouts'));
 app.set('layout', 'default');
 
 app.get('/', (req, res, next) => {
-  res.render('greeting')
+  res.render('greeting');
+});
+
+APIServer.applyMiddleware({
+  app: app,
+  path: '/api'
 });
 
 app.listen(CONFIG.APP.PORT, CONFIG.APP.HOSTNAME, function () {

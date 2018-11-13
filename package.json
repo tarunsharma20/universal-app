@@ -6,13 +6,22 @@
   "author": "Tarun Sharma",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start:dev": "nodemon ./app/index.js"
+  },
   "dependencies": {
+    "apollo-server-express": "^2.2.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^6.1.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-layout": "^0.1.0",
+    "graphql": "^14.0.2",
+    "mongoose": "^5.3.11",
     "node-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
   }
 }
