@@ -5,63 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-  <form id="form-movie">
-    <p>
-      <label for="movie-status" for="">Status</label>
-      <select id="movie-status">
-        <option value="Released">Released</option>
-        <option value="Upcoming">Upcoming</option>
-        <option value="In development">In development</option>
-      </select>
-    </p>
-    <p>
-        <label for="movie-release-date">Release Date</label>
-        <input id="movie-release-date" type="text" />
-    </p>
-    <p>
-        <label for="movie-director">Directors</label>
-        <input id="movie-director" type="text" />
-    </p>
-    <p>
-        <label for="movie-screen-writer">Screen Writers</label>
-        <input id="movie-screen-writer" type="text" />
-    </p>
-    <p>
-        <label for="movie-producer">Producers</label>
-        <input id="movie-producer" type="text" />
-    </p>
-    <p>
-        <label for="movie-budget">Budget</label>
-        <input id="movie-budget" type="text" />
-    </p>
-    <p>
-      <label for="movie-earning">Earning</label>
-      <input id="movie-earning" type="text" />
-    </p>
-    <p>
-      <label for="movie-length">Length</label>
-      <input id="movie-length" type="text" />
-    </p>
-    <p>
-      <label for="movie-story">Story</label>
-      <textarea id="movie-story"></textarea>
-    </p>
-    <p>
-      <label for="movie-cast-member-id">Cast Members Ids</label>
-      <input id="movie-cast-member-id" type="text" />
-    </p>
-    <p>
-      <label for="movie-image">Image</label>
-      <input id="movie-image" type="file" />
-    </p>
-    <p>
-      <button type="reset">Cancel</button>
-      <button type="submit">Add Movie</button>
-    </p>
-  </form>
-  <div id="movies"></div>
+  <button type="button" id="btn-new-movie-model-box">Add Movie</button>
+  <table id="table-movies" class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Release Date</th>
+        <th>Directors</th>
+        <th>Screen Writers</th>
+        <th>Producers</th>
+        <th>Budget</th>
+        <th>Earning</th>
+        <th>Length</th>
+        <th>Story</th>
+        <th>Cast Members</th>
+        <th>Image</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <div id="model-box-create-movie" class="model-box-wrapper">
+    <div class="model-box">
+      <div class="model-box-header">
+        <h2 class="model-box-heading">Create Movie</h2>
+      </div>
+      <div class="model-box-content">
+        <form id="form-movie">
+          <p>
+            <label class="label" for="movie-status" for="">Status</label>
+            <select class="select" id="movie-status">
+              <option value="Released">Released</option>
+              <option value="Upcoming">Upcoming</option>
+              <option value="In development">In development</option>
+            </select>
+          </p>
+          <p>
+            <label class="label" for="movie-release-date">Release Date</label>
+            <input class="text" id="movie-release-date" type="text" />
+          </p>
+          <p>
+            <label class="label" for="movie-director">Directors</label>
+            <input class="text" id="movie-director" type="text" />
+          </p>
+          <p>
+            <label class="label" for="movie-screen-writer">Screen Writers</label>
+            <input class="text" id="movie-screen-writer" type="text" />
+          </p>
+          <p>
+            <label class="label" class="label" for="movie-producer">Producers</label>
+            <input class="text" id="movie-producer" type="text" />
+          </p>
+          <p>
+            <label class="label" for="movie-budget">Budget</label>
+            <input class="text" id="movie-budget" type="text" />
+          </p>
+          <p>
+            <label class="label" for="movie-earning">Earning</label>
+            <input class="text" id="movie-earning" type="text" />
+          </p>
+          <p>
+            <label class="label" for="movie-length">Length</label>
+            <input class="text" id="movie-length" type="text" />
+          </p>
+          <p>
+            <label class="label" for="movie-story">Story</label>
+            <textarea class="textarea" id="movie-story"></textarea>
+          </p>
+          <p>
+            <label class="label" for="movie-cast-member-id">Cast Members Ids</label>
+            <input class="text" id="movie-cast-member-id" type="text" />
+          </p>
+          <p>
+            <label class="label" for="movie-image">Image</label>
+            <input id="movie-image" type="file" />
+          </p>
+        </form>
+      </div>
+      <div class="model-box-actions">
+        <button id="btn-cancel-new-movie" class="btn secondary ghost" type="button">Cancel</button>
+        <button id="btn-add-new-movie" class="btn primary ghost" type="button">Add</button>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/scripts/base.js"></script>
+  <script type="text/javascript" src="/scripts/lib.js"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ const getAllMovies = async (obj, params, context) => {
 }
 
 const createMovie = async (obj, params, context) => {
-  
+
   const {
     status,
     releaseDate: release_date,
@@ -36,6 +36,8 @@ const createMovie = async (obj, params, context) => {
     cast_members_ids,
     image
   });
+
+  return await movie.save()
 
   return await movie.save(function (error, response) {
 
